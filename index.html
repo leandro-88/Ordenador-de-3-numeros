@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Sorteador de números</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__conteudo">
+            <div class="container__informacoes">
+                <div class="container__texto">
+                    <h1>Ordenamento<span class="container__texto-azul"> de números</span></h1>
+
+                    <div class="container__campo">
+                        <label class="texto__paragrafo">Primeiro número</label>
+                        <input class="container__input" id="numero1" type="number" min="1">
+                    </div>
+                    
+                    <div class="container__campo">
+                        <label class="texto__paragrafo">Segundo número</label>
+                        <input class="container__input" id="numero2" type="number" min="1">
+                    </div>
+                    
+                    <div class="container__campo">
+                        <label class="texto__paragrafo">Terceiro número</label>
+                        <input class="container__input" id="numero3" type="number" min="1">
+                    </div>
+                </div>
+                
+                <div class="chute container__botoes">
+                    <button onclick="ordenar()" id="btn-ordenar" class="container__botao">Ordenar</button>
+                    <button onclick="reiniciar()" id="btn-reiniciar" class="container__botao-desabilitado" >Reiniciar</button>
+                </div>
+
+                <div class="container__texto" id="resultado">
+                    <label class="texto__paragrafo">Nenhum número foi ordenado até agora.</label>
+                </div>
+            </div>
+
+            <img src="./img/ia.png" alt="Uma pessoa com capacete de astronauta" class="container__imagem-pessoa" />
+        </div>
+    </div>
+
+    <script src="ordenamento-numeral.js" defer></script>
+</body>
+
+</html>

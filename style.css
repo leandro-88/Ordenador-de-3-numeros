@@ -1,0 +1,166 @@
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* Estilo do Body */
+body {
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Adicionado para alinhar ::before */
+}
+
+/* Imagem de Fundo do Body */
+body::before {
+    background-image: url("img/code.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+/* Container Principal */
+.container {
+    width: 80%;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    border: 1px solid #1875E8;
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    background-image: url("img/Ruido.png");
+    background-size: 100% 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Conteúdo do Container */
+.container__conteudo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+/* Informações do Container */
+.container__informacoes {
+    flex: 1;
+    padding: 3rem;
+}
+
+/* Estilo do Texto */
+.container__texto {
+    margin: 12px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo do Texto Azul */
+.container__texto-azul {
+    color: #1875E8;
+    display: block;
+}
+
+/* Estilo dos Campos de Entrada */
+.container__campo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+/* Estilo dos Inputs */
+.container__input {
+    width: 130px;
+    height: 72px;
+    border-radius: 16px;
+    background-color: #FFF;
+    border: none;
+    color: #1875E8;
+    padding: 2rem;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Estilo dos Botões */
+.container__botoes {
+    display: flex;
+    flex-direction: row;
+    gap: 1em; /* Espaçamento entre os botões */
+}
+
+.container__botao, .container__botao-desabilitado {
+    border-radius: 16px;
+    padding: 16px 24px;
+    font-size: 24px;
+    width: 100%;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+.container__botao {
+    background: #1875E8;
+}
+
+.container__botao-desabilitado {
+    background: #6f6f70;
+    cursor: not-allowed;
+}
+
+/* Estilo do Título */
+h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    padding: 2rem;
+}
+
+/* Estilo do Parágrafo */
+.texto__paragrafo {
+    color: #FFF;
+    font-family: 'Inter';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Estilo da Imagem da Pessoa */
+.container__imagem-pessoa {
+    max-width: 100%;
+    height: auto;
+    margin-top: 2rem;
+}
+
+/* Estilo do Botão Desabilitado */
+button:disabled {
+    background-color: gray;
+}
+
+/* Media Query */
+@media screen and (max-width: 1250px) {
+    /* Esconde a Imagem da Pessoa */
+    .container__imagem-pessoa {
+        display: none;
+    }
+
+    /* Reduz o Tamanho do Título */
+    h1 {
+        font-size: 50px;
+    }
+}
